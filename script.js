@@ -55,5 +55,3 @@ function playGame() {
     console.log("Game Result: TIE");
   }
 }
-
-playGame();
