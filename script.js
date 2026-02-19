@@ -1,3 +1,8 @@
+let btnRock = document.querySelector("#btn-rock");
+let btnPaper = document.querySelector("#btn-paper");
+let btnScissors = document.querySelector("#btn-scissors");
+let result = document.querySelector(".result")
+
 function getComputerChoice() {
   let randNum = Math.random();
 
@@ -16,21 +21,17 @@ function playRound(humanChoice, computerChoice) {
     (humanChoice == "paper" && computerChoice == "rock") ||
     (humanChoice == "scissors" && computerChoice == "paper")
   ) {
-    console.log(`You Win! ${humanChoice} beats ${computerChoice}.`);
+    result.textContent = `You Win! ${humanChoice} beats ${computerChoice}.`;
   } else if (
     (humanChoice == "scissors" && computerChoice == "rock") ||
     (humanChoice == "rock" && computerChoice == "paper") ||
     (humanChoice == "paper" && computerChoice == "scissors")
   ) {
-    console.log(`You Lose! ${computerChoice} beats ${humanChoice}.`);
+    result.textContent = `You Lose! ${computerChoice} beats ${humanChoice}.`;
   } else {
-    console.log(`Tie.`);
+    result.textContent = `Tie.`;
   }
 }
-
-let btnRock = document.querySelector("#btn-rock");
-let btnPaper = document.querySelector("#btn-paper");
-let btnScissors = document.querySelector("#btn-scissors");
 
 btnRock.addEventListener("click", () => { 
   console.log("Rock");
